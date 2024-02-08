@@ -3,7 +3,6 @@ class Animal:
         self.name = name
         self.species = species 
         
-    
     def __str__(self):
         return f'Name: {self.name}, Species: {self.species}'
     
@@ -45,13 +44,18 @@ class Reptile(Animal):
         return f'{self.name} the {self.species} is basking in the sun'
     
 class Aviary:
-    def __init__(self):
-        self.birds = []
+    def __init__(self, birds = []):
+        self.birds = birds
+
+    def add_birds(self, bird):
+        self.birds.append(bird)
     
 class ReptileEnclosure:
-    def __init__(self):
-        self.reptiles = []
+    def __init__(self, reptiles = []):
+        self.reptiles = reptiles
 
+    def add_reptiles(self, reptiles):
+        self.reptiles.append(reptiles)
 
 
 
